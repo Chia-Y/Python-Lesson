@@ -1,0 +1,43 @@
+"""
+Name: Lin
+File: StepUp.py
+---------------------
+Pre-condition: Karel was at (1, 1), beeper was at (1, 2)
+Post-condition: Karel is at (2, 5), 99 beepers are at (2, 4)
+"""
+from karel.stanfordkarel import *
+
+def main():
+    # Algorithm 演算法
+    move()
+    pick_beeper()
+    move()
+    turn_left()
+    move()
+    turn_right()
+    move()
+    put_99_beepers()
+    move()
+
+
+def turn_right():
+    for i in range(3):
+        turn_left()
+
+
+"""def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()"""
+
+
+def put_99_beepers():
+    for i in range(99):
+        put_beeper()
+
+
+"""def put_99_beepers():
+    for i in range(33):
+        put_beepers()
+        put_beepers()
+        put_beepers()"""
